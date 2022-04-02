@@ -4,14 +4,15 @@ const typeDefs = gql`
 
 # pontos de entrada para queries
   type Query {
-    Users: [User]
+    Users: [User!]!
   }
 
   type User {
     id: ID!
     name: String
     email: String
-    password: Float
+    age: Int
+    salary: Float
 
   }
 `;
@@ -22,8 +23,16 @@ const resolvers = {
       {
         id: "1",
         name: "John Doe",
+        email: "JohnDoe@gmail.com",
+        age: 30,
+        salary: 2000.25
+      },
+      {
+        id: "2",
+        name: "Eurico",
         email: "eurico@gmail.com",
-        password: "123456"
+        age: 25,
+        salary: 70000.25
       },
     ],
   },
