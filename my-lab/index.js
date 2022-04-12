@@ -10,7 +10,7 @@ const typeDefs = gql`
   }
 
   type Character {
-    id: Int!
+    id: ID!
     name: String!
     status: String!
     species: String!
